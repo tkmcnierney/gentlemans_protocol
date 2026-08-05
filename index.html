@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2315181B'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' fill='%23FAF9F6' font-family='Georgia, serif' font-size='48' font-weight='bold'>GP</text></svg>">
+    <title>The Gentleman's Protocol</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FAF9F6',
+                            100: '#F5F3EF',
+                            200: '#EBE7DF',
+                            300: '#DDD7CB',
+                        },
+                        charcoal: {
+                            800: '#212529',
+                            900: '#15181B',
+                        },
+                        bronze: {
+                            600: '#9E6B48',
+                            700: '#845333',
+                            800: '#6B4024',
+                            900: '#4D2B14',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Helper Styles & Animations -->
+    <style>
+        .heading-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-charcoal-900 font-sans antialiased selection:bg-bronze-700 selection:text-white">
+
+    <!-- Header / Navigation Bar -->
+    <header id="main-header" class="sticky top-0 z-50 bg-cream-50/90 backdrop-blur-md border-b border-cream-200/80 transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-4">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-2 group flex-shrink-0">
+                    <span class="w-8 h-8 rounded-full bg-charcoal-900 text-cream-50 flex items-center justify-center font-serif text-lg font-bold group-hover:bg-bronze-700 transition-colors">GP</span>
+                    <span class="heading-serif text-xl font-bold tracking-tight text-charcoal-900">The Gentleman's Protocol</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 lg:space-x-8 text-sm font-medium text-slate-700 flex-shrink-0">
+                    <a href="#about" class="hover:text-bronze-700 transition-colors">About</a>
+                    <a href="#how-we-work" class="hover:text-bronze-700 transition-colors">How We Work</a>
+                    <a href="#coaches" class="hover:text-bronze-700 transition-colors">Coaches</a>
+                    <a href="#testimonials" class="hover:text-bronze-700 transition-colors">Testimonials</a>
+                    <a href="#faq" class="hover:text-bronze-700 transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden lg:flex items-center flex-shrink-0">
+                    <a href="#inquire" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-charcoal-900 text-cream-50 text-xs font-semibold uppercase tracking-wider hover:bg-bronze-800 transition-all duration-200 shadow-sm hover:shadow">
+                        Inquire Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-md text-charcoal-800 hover:text-bronze-700 focus:outline-none" aria-label="Toggle Navigation">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cream-100 border-b border-cream-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-base font-medium text-slate-800 hover:text-bronze-700 mobile-nav-link">About</a>
+            <a href="#how-we-work" class="block py-2 text-base font-medium text-slate-800 hover:text-bronze-700 mobile-nav-link">How We Work</a>
+            <a href="#coaches" class="block py-2 text-base font-medium text-slate-800 hover:text-bronze-700 mobile-nav-link">Coaches</a>
+            <a href="#testimonials" class="block py-2 text-base font-medium text-slate-800 hover:text-bronze-700 mobile-nav-link">Testimonials</a>
+            <a href="#faq" class="block py-2 text-base font-medium text-slate-800 hover:text-bronze-700 mobile-nav-link">FAQ</a>
+            <a href="#inquire" class="block w-full text-center py-3 rounded-full bg-charcoal-900 text-cream-50 text-sm font-semibold uppercase tracking-wider mobile-nav-link">Inquire Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 overflow-hidden border-b border-cream-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Column: Stories-Style Split-Tap Hero Portrait Component -->
+                <div class="lg:col-span-5 relative order-2 lg:order-1 select-none">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Background Decorative Accent -->
+                        <div class="absolute -inset-4 rounded-3xl bg-bronze-700/10 transform -rotate-2"></div>
+                        
+                        <!-- Main Interactive Frame Container -->
+                        <div id="hero-stories-container" class="relative rounded-2xl overflow-hidden bg-cream-200 aspect-[4/5] shadow-2xl border border-cream-300 flex flex-col justify-between p-4 group">
+                            
+                            <!-- Top Instagram-Stories Progress Bar Container -->
+                            <div class="relative z-30 flex items-center gap-2 w-full pt-1 px-1">
+                                <!-- Progress Bar 1 -->
+                                <div class="h-1 flex-1 bg-white/30 rounded-full overflow-hidden backdrop-blur-xs">
+                                    <div id="hero-bar-0" class="h-full bg-white transition-all duration-100 ease-linear w-0"></div>
+                                </div>
+                                <!-- Progress Bar 2 -->
+                                <div class="h-1 flex-1 bg-white/30 rounded-full overflow-hidden backdrop-blur-xs">
+                                    <div id="hero-bar-1" class="h-full bg-white transition-all duration-100 ease-linear w-0"></div>
+                                </div>
+                            </div>
+
+                            <!-- Photo Slide 1: Tyler McNierney -->
+                            <div id="hero-slide-0" class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10">
+                                <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/tyler-hero.jpg or update the src path below -->
+                                <img src="assets/tyler-hero.jpg" alt="Tyler McNierney - Founder & Executive Coach" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                <div class="hidden w-full h-full bg-stone-300 flex items-center justify-center">
+                                    <svg class="w-40 h-40 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
+                                        <circle cx="100" cy="75" r="35" fill="#9E6B48" />
+                                        <path d="M35,175 C35,125 65,110 100,110 C135,110 165,125 165,175 Z" fill="#6B4024" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Photo Slide 2: Lukas Chang -->
+                            <div id="hero-slide-1" class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-10">
+                                <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/lukas-hero.jpg or update the src path below -->
+                                <img src="assets/lukas-hero.jpg" alt="Lukas Chang - Founder & Executive Coach" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                <div class="hidden w-full h-full bg-stone-400 flex items-center justify-center">
+                                    <svg class="w-40 h-40 text-stone-500" fill="currentColor" viewBox="0 0 200 200">
+                                        <circle cx="100" cy="75" r="35" fill="#845333" />
+                                        <path d="M35,175 C35,125 65,110 100,110 C135,110 165,125 165,175 Z" fill="#4D2B14" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Split Tap Click Targets -->
+                            <button id="hero-tap-prev" type="button" class="absolute inset-y-0 left-0 w-1/2 z-20 focus:outline-none cursor-pointer flex items-center justify-start pl-3 group/left hidden" aria-label="Previous Photo">
+                                <span class="w-8 h-8 rounded-full bg-black/20 text-white flex items-center justify-center opacity-0 group-hover/left:opacity-100 transition-opacity duration-200 backdrop-blur-xs">‹</span>
+                            </button>
+                            <button id="hero-tap-next" type="button" class="absolute inset-y-0 right-0 w-1/2 z-20 focus:outline-none cursor-pointer flex items-center justify-end pr-3 group/right" aria-label="Next Photo">
+                                <span class="w-8 h-8 rounded-full bg-black/20 text-white flex items-center justify-center opacity-0 group-hover/right:opacity-100 transition-opacity duration-200 backdrop-blur-xs">›</span>
+                            </button>
+
+                            <!-- Dynamic Overlay Label -->
+                            <div class="relative z-30 mt-auto bg-charcoal-900/80 backdrop-blur-md p-4 rounded-xl text-cream-50 border border-white/10 transition-all duration-300">
+                                <p id="hero-coach-name" class="heading-serif text-lg font-bold">Tyler McNierney</p>
+                                <p id="hero-coach-role" class="text-xs text-cream-200">Co-Founder & Executive Coach • San Francisco</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Headline, Subtitle, CTA -->
+                <div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cream-200/80 border border-cream-300 text-bronze-800 text-xs font-semibold uppercase tracking-widest">
+                        <span class="w-2 h-2 rounded-full bg-bronze-700 animate-pulse"></span>
+                        <span>Executive Dating Coaching</span>
+                    </div>
+
+                    <h1 class="heading-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal-900 leading-[1.15] tracking-tight">
+                        Helping driven professionals build exceptional relationships.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl">
+                        A repeatable, data-informed, and fulfilling approach to dating designed specifically for high-achieving professionals.
+                    </p>
+
+                    <!-- Single Primary CTA -->
+                    <div class="pt-2">
+                        <a href="#inquire" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-charcoal-900 text-cream-50 text-sm font-semibold uppercase tracking-wider hover:bg-bronze-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                            Inquire now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Interactive Showcase + Brand Narrative) -->
+    <section id="about" class="py-20 md:py-28 bg-white border-b border-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Badge Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="px-3 py-1 rounded-full bg-cream-100 border border-cream-300 text-bronze-800 text-xs font-semibold uppercase tracking-widest">
+                    About
+                </span>
+            </div>
+
+            <!-- Grid Layout: Left = Toggleable Hinge Showcase, Right = Clean Narrative -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Column: Interactive Before/After Profile Card -->
+                <div class="lg:col-span-5 w-full max-w-md mx-auto">
+                    
+                    <!-- Toggle Pill Switch with Sliding Background Indicator -->
+                    <div class="relative flex items-center justify-center mb-4 p-1 bg-stone-200/70 rounded-full w-[220px] mx-auto border border-stone-300/60 select-none">
+                        <div id="toggle-slider-pill" class="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-full shadow-xs transition-transform duration-300 ease-out transform translate-x-0"></div>
+                        <button id="toggle-before-btn" type="button" class="relative z-10 flex-1 py-1.5 text-center text-xs font-semibold transition-colors duration-200 text-stone-800 focus:outline-none">
+                            Before
+                        </button>
+                        <button id="toggle-after-btn" type="button" class="relative z-10 flex-1 py-1.5 text-center text-xs font-semibold transition-colors duration-200 text-stone-500 focus:outline-none">
+                            After
+                        </button>
+                    </div>
+
+                    <!-- Single Interactive Profile Card Container with Fluid Carousel Track -->
+                    <div id="profile-card-container" class="bg-stone-100/90 p-4 sm:p-5 rounded-3xl border border-stone-200 shadow-sm overflow-hidden">
+                        
+                        <!-- Sliding Track Container with Distinct Gap for Clean Break -->
+                        <div id="profile-slider-track" class="flex gap-8 w-full transition-transform duration-500 ease-in-out transform translate-x-0">
+                            
+                            <!-- BEFORE Profile Slide -->
+                            <div id="profile-content-before" class="w-full space-y-4 flex-shrink-0">
+                                <!-- Main Portrait Photo Block -->
+                                <div class="relative rounded-2xl overflow-hidden bg-stone-300 aspect-[4/5] flex items-center justify-center border border-stone-300 shadow-xs">
+                                    <img src="assets/lukas-before.jpg" alt="Before Profile Photo - Mountain Hiking Selfie" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                    <svg class="hidden w-36 h-36 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
+                                        <circle cx="100" cy="80" r="35" fill="#A89F91" />
+                                        <path d="M40,180 C40,130 70,110 100,110 C130,110 160,130 160,180 Z" fill="#8C8274" />
+                                    </svg>
+                                </div>
+
+                                <!-- Prompt Card Block -->
+                                <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-xs space-y-2">
+                                    <p class="text-xs font-semibold text-stone-500">Typical Sunday</p>
+                                    <p class="heading-serif text-lg font-bold text-charcoal-900 leading-snug">
+                                        "Watching sports, hanging out with friends, drinking coffee."
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- AFTER Profile Slide -->
+                            <div id="profile-content-after" class="w-full space-y-4 flex-shrink-0">
+                                <!-- Main Portrait Photo Block -->
+                                <div class="relative rounded-2xl overflow-hidden bg-bronze-900/10 aspect-[4/5] flex items-center justify-center border border-bronze-600/20 shadow-xs">
+                                    <img src="assets/lukas-after.jpg" alt="After Profile Photo - DJ Set Performance" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                    <svg class="hidden w-36 h-36 text-bronze-800/30" fill="currentColor" viewBox="0 0 200 200">
+                                        <circle cx="100" cy="75" r="38" fill="#A36849" />
+                                        <path d="M35,185 C35,125 65,105 100,105 C135,105 165,125 165,185 Z" fill="#703F27" />
+                                    </svg>
+                                </div>
+
+                                <!-- Prompt Card Block -->
+                                <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-xs space-y-2">
+                                    <p class="text-xs font-semibold text-stone-500">Together, we could</p>
+                                    <p class="heading-serif text-lg font-bold text-charcoal-900 leading-relaxed">
+                                        "Roast the characters on Korean dating shows for their questionable decisions"
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Profile Info Metadata Bar -->
+                        <div class="mt-4 bg-white rounded-2xl border border-stone-200/80 p-3 flex items-center justify-around text-xs font-medium text-stone-600 shadow-xs">
+                            <div class="flex items-center space-x-1.5">
+                                <svg class="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                <span>25</span>
+                            </div>
+                            <div class="h-4 w-px bg-stone-200"></div>
+                            <div class="flex items-center space-x-1.5">
+                                <svg class="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 18h12l3-18H3z"/></svg>
+                                <span>5' 10"</span>
+                            </div>
+                            <div class="h-4 w-px bg-stone-200"></div>
+                            <div class="flex items-center space-x-1.5">
+                                <svg class="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                <span>New York</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Focused Narrative -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal-900 leading-tight">
+                        Applying high-agency strategy and emotional depth to your personal life.
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+                        High performers spend thousands of hours building their careers—yet often leave their most consequential life decision to chance or frustrating dating app algorithms. We treat your search for a lifelong partner with the same strategic priority, privacy, and rigor as a C-suite initiative.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base sm:text-lg pt-2">
+                        Our framework combines structured outer mechanics—such as profile optimization, female-gaze photography, and conversation dynamics—with deep inner alignment, giving you the clarity and confidence to build an extraordinary partnership.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section (Dedicated 4-Column Program Deliverables) -->
+    <section id="how-we-work" class="py-20 md:py-28 bg-cream-50/70 border-b border-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-3 py-1 rounded-full bg-cream-200 border border-cream-300 text-bronze-800 text-xs font-semibold uppercase tracking-widest">
+                    How We Work
+                </span>
+                <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-charcoal-900">
+                    A comprehensive protocol engineered for results.
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Every element of our program is structured to maximize efficiency, accountability, and clarity.
+                </p>
+            </div>
+
+            <!-- 4-Column Card Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 01 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <span class="heading-serif text-2xl font-bold text-bronze-700">01</span>
+                        <h3 class="heading-serif text-xl font-bold text-charcoal-900">1:1 Weekly Debrief Sessions</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Dedicated weekly strategy calls to analyze date debriefs, dissect dynamic conversations, fine-tune messaging, and set clear actionable goals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <span class="heading-serif text-2xl font-bold text-bronze-700">02</span>
+                        <h3 class="heading-serif text-xl font-bold text-charcoal-900">Cohort Strategy Calls</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Group workshops exploring core dating mechanics: understanding female gaze, mastering photography, elevated styling basics, and authentic communication.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <span class="heading-serif text-2xl font-bold text-bronze-700">03</span>
+                        <h3 class="heading-serif text-xl font-bold text-charcoal-900">On-Demand Text Support</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Direct, asynchronous access between sessions for real-time guidance on text threads, pre-date prep, and navigating time-sensitive decisions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <span class="heading-serif text-2xl font-bold text-bronze-700">04</span>
+                        <h3 class="heading-serif text-xl font-bold text-charcoal-900">Guides & Profile Audits</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Custom photoshoot shot lists, tailored wardrobe recommendations, bio prompt creation, and algorithmic optimization across primary dating platforms.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Coaches Section -->
+    <section id="coaches" class="py-20 md:py-28 bg-white border-b border-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3 py-1 rounded-full bg-cream-100 border border-cream-300 text-bronze-800 text-xs font-semibold uppercase tracking-widest">
+                    Meet The Coaches
+                </span>
+            </div>
+
+            <!-- Coaches Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                
+                <!-- Coach 1: Tyler McNierney -->
+                <div class="bg-cream-50/60 p-6 sm:p-8 rounded-3xl border border-cream-200/80 flex flex-col xl:flex-row items-center xl:items-start gap-6 shadow-xs hover:shadow-md transition-shadow">
+                    <div class="w-48 h-48 rounded-2xl overflow-hidden bg-cream-200 flex-shrink-0 border border-cream-300 relative shadow-xs">
+                        <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/tyler-coach.jpg or update the src path below -->
+                        <img src="assets/tyler-coach.jpg" alt="Tyler McNierney" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <div class="hidden w-full h-full bg-stone-300 flex items-center justify-center">
+                            <svg class="w-28 h-28 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
+                                <circle cx="100" cy="75" r="35" fill="#A89F91" />
+                                <path d="M35,175 C35,125 65,110 100,110 C135,110 165,125 165,175 Z" fill="#8C8274" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-center xl:text-left flex-1">
+                        <div>
+                            <h3 class="heading-serif text-2xl sm:text-3xl font-bold text-charcoal-900">Tyler McNierney</h3>
+                            <p class="text-xs font-semibold text-bronze-700 uppercase tracking-wider mt-1">Co-Founder & Executive Coach</p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Tyler is the creator of @tylerinthemaking, which grew to 50,000+ followers in six months focused on modern gentlemanhood and equitable relationships. He draws his dating insights from a 7-year partnership with his college sweetheart to help high achievers build extraordinary relationships.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coach 2: Lukas Chang -->
+                <div class="bg-cream-50/60 p-6 sm:p-8 rounded-3xl border border-cream-200/80 flex flex-col xl:flex-row items-center xl:items-start gap-6 shadow-xs hover:shadow-md transition-shadow">
+                    <div class="w-48 h-48 rounded-2xl overflow-hidden bg-cream-200 flex-shrink-0 border border-cream-300 relative shadow-xs">
+                        <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/lukas-coach.jpg or update the src path below -->
+                        <img src="assets/lukas-coach.jpg" alt="Lukas Chang" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <div class="hidden w-full h-full bg-stone-300 flex items-center justify-center">
+                            <svg class="w-28 h-28 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
+                                <circle cx="100" cy="75" r="35" fill="#A89F91" />
+                                <path d="M35,175 C35,125 65,110 100,110 C135,110 165,125 165,175 Z" fill="#8C8274" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-center xl:text-left flex-1">
+                        <div>
+                            <h3 class="heading-serif text-2xl sm:text-3xl font-bold text-charcoal-900">Lukas Chang</h3>
+                            <p class="text-xs font-semibold text-bronze-700 uppercase tracking-wider mt-1">Co-Founder & Executive Coach</p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Specializing in interpersonal dynamics and emotional intelligence, Lukas guides clients through deep inner work, helping high achievers build authentic vulnerability, presence, and lasting chemistry on dates.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-28 bg-cream-50 border-b border-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 rounded-md bg-cream-200 text-bronze-800 text-xs font-semibold uppercase tracking-widest">
+                    Client Outcomes
+                </div>
+                <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-charcoal-900">
+                    Trusted by high performers across tech, finance, and entrepreneurship.
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Read how some of our clients transformed their approach to dating and built meaningful, long-term partnerships.
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-200 shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="inline-block px-3 py-1 rounded-full bg-bronze-700/10 text-bronze-800 text-xs font-semibold">
+                            YC Founder & CEO
+                        </span>
+                        <p class="text-slate-700 text-sm leading-relaxed font-serif italic">
+                            "Within 3 months of coaching, I went from burnt out on apps to dating someone who truly aligns with my long-term values. What I didn't expect was how much clarity and self-belief I gained in my personal life overall."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-cream-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-charcoal-900">New York, NY</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-200 shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="inline-block px-3 py-1 rounded-full bg-bronze-700/10 text-bronze-800 text-xs font-semibold">
+                            Product Manager
+                        </span>
+                        <p class="text-slate-700 text-sm leading-relaxed font-serif italic">
+                            "I had been single for over 5 years. The Gentlemen's Protocol gave me a practical, dignified framework that took the random guesswork out of dating. I'm now in a loving, committed relationship with an incredible partner."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-cream-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-charcoal-900">San Francisco, CA</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-28 bg-white border-b border-cream-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 rounded-md bg-cream-100 text-bronze-800 text-xs font-semibold uppercase tracking-widest">
+                    Frequently Asked Questions
+                </div>
+                <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-charcoal-900">
+                    Everything you need to know about our process.
+                </h2>
+            </div>
+
+            <!-- Accordions Container -->
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-cream-200 rounded-xl overflow-hidden bg-cream-50/50 transition-colors">
+                    <button type="button" class="faq-toggle w-full px-6 py-5 text-left font-serif text-lg font-bold text-charcoal-900 flex items-center justify-between focus:outline-none">
+                        <span>Who do you typically work with?</span>
+                        <span class="faq-icon ml-4 text-bronze-700 text-xl font-sans font-normal transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-cream-200/60 pt-4">
+                        We work with founders, tech leaders, executives, investors, and growth-minded professionals who want to bring intentionality and agency to their relationship search. Our clients value high discretion, clear communication, and structured feedback.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-cream-200 rounded-xl overflow-hidden bg-cream-50/50 transition-colors">
+                    <button type="button" class="faq-toggle w-full px-6 py-5 text-left font-serif text-lg font-bold text-charcoal-900 flex items-center justify-between focus:outline-none">
+                        <span>How long does a coaching engagement last?</span>
+                        <span class="faq-icon ml-4 text-bronze-700 text-xl font-sans font-normal transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-cream-200/60 pt-4">
+                        We start with an initial 6-week commitment to build momentum, execute complete profile optimization, and calibrate date performance. Following the initial period, clients can continue month-to-month.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-cream-200 rounded-xl overflow-hidden bg-cream-50/50 transition-colors">
+                    <button type="button" class="faq-toggle w-full px-6 py-5 text-left font-serif text-lg font-bold text-charcoal-900 flex items-center justify-between focus:outline-none">
+                        <span>How much time commitment is required per week?</span>
+                        <span class="faq-icon ml-4 text-bronze-700 text-xl font-sans font-normal transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-cream-200/60 pt-4">
+                        Most clients dedicate 2 to 4 hours per week, including our 1:1 debrief session, async text updates, and active dating time. Our goal is to make every hour you spend on dating significantly more efficient.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-cream-200 rounded-xl overflow-hidden bg-cream-50/50 transition-colors">
+                    <button type="button" class="faq-toggle w-full px-6 py-5 text-left font-serif text-lg font-bold text-charcoal-900 flex items-center justify-between focus:outline-none">
+                        <span>What kind of support is provided between sessions?</span>
+                        <span class="faq-icon ml-4 text-bronze-700 text-xl font-sans font-normal transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-cream-200/60 pt-4">
+                        You have direct access to on-demand text support for messaging review, date debriefs, and real-time guidance whenever time-sensitive questions arise.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Inquiry Section (Guided 2-Step Interactive Application) -->
+    <section id="inquire" class="py-20 md:py-28 bg-charcoal-900 text-cream-50 border-b border-slate-800 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center space-y-4 mb-10">
+                <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-bronze-600 text-xs font-semibold uppercase tracking-widest">
+                    Application
+                </span>
+                <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                    Begin Your Protocol
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                    We accept a limited roster of clients per month to ensure complete 1:1 dedication. Complete the brief application below to start the conversation.
+                </p>
+            </div>
+
+            <!-- Interactive Application Card -->
+            <div class="bg-charcoal-800 border border-slate-700/80 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                
+                <!-- Form Element -->
+                <form id="inquiry-form" class="space-y-6" novalidate>
+                    
+                    <!-- Step Indicator Label -->
+                    <div id="step-indicator-label" class="text-xs font-semibold uppercase tracking-widest text-bronze-600 mb-2">Step 1 of 2</div>
+
+                    <!-- INVISIBLE HONEYPOT FIELD FOR ANTI-SPAM (Hidden from real users) -->
+                    <div class="hidden" aria-hidden="true">
+                        <label for="website_url_confirm">Leave this field blank</label>
+                        <input type="text" id="website_url_confirm" name="website_url_confirm" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- STEP 1 FIELDS -->
+                    <div id="form-step-1" class="space-y-5 animate-fade-in">
+                        <div>
+                            <label for="full_name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                                Full Name <span class="text-bronze-600">*</span>
+                            </label>
+                            <input type="text" id="full_name" name="full_name" required placeholder="e.g. Alex Morgan"
+                                class="w-full px-4 py-3.5 rounded-xl bg-charcoal-900 border border-slate-700 text-cream-50 placeholder-slate-500 focus:outline-none focus:border-bronze-700 focus:ring-1 focus:ring-bronze-700 transition">
+                            <p id="error-full_name" class="hidden text-xs text-red-400 mt-1">Please enter your name.</p>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                                Email Address <span class="text-bronze-600">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="alex@company.com"
+                                class="w-full px-4 py-3.5 rounded-xl bg-charcoal-900 border border-slate-700 text-cream-50 placeholder-slate-500 focus:outline-none focus:border-bronze-700 focus:ring-1 focus:ring-bronze-700 transition">
+                            <p id="error-email" class="hidden text-xs text-red-400 mt-1">Please enter a valid email address.</p>
+                        </div>
+
+                        <div>
+                            <label for="city" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                                City / Location <span class="text-bronze-600">*</span>
+                            </label>
+                            <input type="text" id="city" name="city" required placeholder="e.g. New York, NY"
+                                class="w-full px-4 py-3.5 rounded-xl bg-charcoal-900 border border-slate-700 text-cream-50 placeholder-slate-500 focus:outline-none focus:border-bronze-700 focus:ring-1 focus:ring-bronze-700 transition">
+                            <p id="error-city" class="hidden text-xs text-red-400 mt-1">Please enter your location.</p>
+                        </div>
+
+                        <div>
+                            <label for="role_linkedin" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                                Role / Industry or LinkedIn URL <span class="text-bronze-600">*</span>
+                            </label>
+                            <input type="text" id="role_linkedin" name="role_linkedin" required placeholder="e.g. Founder at Tech Startup / linkedin.com/in/alex"
+                                class="w-full px-4 py-3.5 rounded-xl bg-charcoal-900 border border-slate-700 text-cream-50 placeholder-slate-500 focus:outline-none focus:border-bronze-700 focus:ring-1 focus:ring-bronze-700 transition">
+                            <p id="error-role_linkedin" class="hidden text-xs text-red-400 mt-1">Please share your role or LinkedIn profile.</p>
+                        </div>
+
+                        <div class="pt-4">
+                            <button id="btn-next-step" type="button" class="w-full py-4 rounded-full bg-cream-50 text-charcoal-900 font-semibold text-xs uppercase tracking-wider hover:bg-bronze-700 hover:text-white transition-all duration-200 shadow-md">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 FIELDS -->
+                    <div id="form-step-2" class="space-y-5 hidden">
+                        <div>
+                            <label for="prompt_reason" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                                What prompted you to reach out today? <span class="text-bronze-600">*</span>
+                            </label>
+                            <textarea id="prompt_reason" name="prompt_reason" rows="4" required placeholder="Briefly describe your current dating situation and what you hope to achieve..."
+                                class="w-full px-4 py-3.5 rounded-xl bg-charcoal-900 border border-slate-700 text-cream-50 placeholder-slate-500 focus:outline-none focus:border-bronze-700 focus:ring-1 focus:ring-bronze-700 transition resize-none"></textarea>
+                            <p id="error-prompt_reason" class="hidden text-xs text-red-400 mt-1">Please provide a brief answer.</p>
+                        </div>
+
+                        <div>
+                            <label for="timeline" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                                Desired Start Timeline <span class="text-bronze-600">*</span>
+                            </label>
+                            <select id="timeline" name="timeline" required class="w-full px-4 py-3.5 rounded-xl bg-charcoal-900 border border-slate-700 text-cream-50 focus:outline-none focus:border-bronze-700 focus:ring-1 focus:ring-bronze-700 transition cursor-pointer">
+                                <option value="" disabled selected class="text-slate-500">Select desired timeline</option>
+                                <option value="Immediately">Immediately</option>
+                                <option value="Within 30 days">Within 30 days</option>
+                                <option value="Just exploring">Just exploring options</option>
+                            </select>
+                            <p id="error-timeline" class="hidden text-xs text-red-400 mt-1">Please select a timeline.</p>
+                        </div>
+
+                        <div class="pt-4 flex items-center gap-4">
+                            <button id="btn-prev-step" type="button" class="w-1/3 py-4 rounded-full bg-slate-700 text-cream-200 font-semibold text-xs uppercase tracking-wider hover:bg-slate-600 transition-all duration-200">
+                                ← Back
+                            </button>
+                            <button id="btn-submit-form" type="submit" class="w-2/3 py-4 rounded-full bg-bronze-700 text-white font-semibold text-xs uppercase tracking-wider hover:bg-bronze-800 transition-all duration-200 shadow-md flex items-center justify-center space-x-2">
+                                <span id="submit-btn-text">Submit Application</span>
+                                <svg id="submit-spinner" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- SUCCESS MESSAGE STATE -->
+                <div id="form-success-state" class="hidden py-12 text-center space-y-6 animate-fade-in">
+                    <div class="w-16 h-16 bg-bronze-700/20 text-bronze-600 rounded-full flex items-center justify-center mx-auto border border-bronze-700/40">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="heading-serif text-3xl font-bold text-white">Application Received</h3>
+                        <p class="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+                            Thank you for reaching out. We review every application discreetly and will respond directly within 24 to 48 hours.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-900 text-cream-200 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-800">
+                <!-- Brand Info -->
+                <div class="space-y-2 text-center md:text-left">
+                    <span class="heading-serif text-2xl font-bold text-white tracking-tight">The Gentleman's Protocol</span>
+                    <p class="text-xs text-slate-400">Executive Dating Coaching for Driven Professionals.</p>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="flex flex-wrap justify-center gap-8 text-xs font-medium tracking-wider uppercase text-slate-300">
+                    <a href="#about" class="hover:text-white transition">About</a>
+                    <a href="#how-we-work" class="hover:text-white transition">How We Work</a>
+                    <a href="#coaches" class="hover:text-white transition">Coaches</a>
+                    <a href="#testimonials" class="hover:text-white transition">Testimonials</a>
+                    <a href="#faq" class="hover:text-white transition">FAQ</a>
+                    <a href="#inquire" class="hover:text-white transition">Inquire</a>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 The Gentleman's Protocol. All rights reserved.</p>
+                <p>Designed for discreet, high-agency relationship building.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Header Shadow on Scroll
+            const mainHeader = document.getElementById('main-header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 20) {
+                    mainHeader.classList.add('shadow-sm');
+                } else {
+                    mainHeader.classList.remove('shadow-sm');
+                }
+            });
+
+            // 2. Hero Stories-Style Split Tap Gallery
+            const coachData = [
+                { name: 'Tyler McNierney', role: 'Co-Founder & Executive Coach • San Francisco' },
+                { name: 'Lukas Chang', role: 'Co-Founder & Executive Coach • New York' }
+            ];
+
+            let heroActiveIndex = 0;
+            let heroTimer = null;
+            let heroProgressInterval = null;
+            let heroUserInteracted = false;
+            const STORY_DURATION = 3500; // 3.5 seconds
+
+            const heroSlide0 = document.getElementById('hero-slide-0');
+            const heroSlide1 = document.getElementById('hero-slide-1');
+            const heroBar0 = document.getElementById('hero-bar-0');
+            const heroBar1 = document.getElementById('hero-bar-1');
+            const heroCoachName = document.getElementById('hero-coach-name');
+            const heroCoachRole = document.getElementById('hero-coach-role');
+            const heroTapPrev = document.getElementById('hero-tap-prev');
+            const heroTapNext = document.getElementById('hero-tap-next');
+
+            function updateHeroSlide(index) {
+                heroActiveIndex = index;
+
+                // Toggle photo slide visibilities and hide dead-end navigation arrows
+                if (index === 0) {
+                    if (heroSlide0) heroSlide0.classList.replace('opacity-0', 'opacity-100');
+                    if (heroSlide1) heroSlide1.classList.replace('opacity-100', 'opacity-0');
+                    if (heroBar0) heroBar0.style.width = '100%';
+                    if (heroBar1) heroBar1.style.width = '0%';
+                    if (heroTapPrev) heroTapPrev.classList.add('hidden');
+                    if (heroTapNext) heroTapNext.classList.remove('hidden');
+                } else {
+                    if (heroSlide0) heroSlide0.classList.replace('opacity-100', 'opacity-0');
+                    if (heroSlide1) heroSlide1.classList.replace('opacity-0', 'opacity-100');
+                    if (heroBar0) heroBar0.style.width = '100%';
+                    if (heroBar1) heroBar1.style.width = '100%';
+                    if (heroTapPrev) heroTapPrev.classList.remove('hidden');
+                    if (heroTapNext) heroTapNext.classList.add('hidden');
+                }
+
+                // Update text badge content
+                if (heroCoachName) heroCoachName.textContent = coachData[index].name;
+                if (heroCoachRole) heroCoachRole.textContent = coachData[index].role;
+            }
+
+            function startHeroAutoPlay() {
+                if (heroUserInteracted) return;
+
+                let startTime = Date.now();
+                if (heroProgressInterval) clearInterval(heroProgressInterval);
+
+                heroProgressInterval = setInterval(() => {
+                    let elapsed = Date.now() - startTime;
+                    let progressPercent = Math.min((elapsed / STORY_DURATION) * 100, 100);
+
+                    if (heroActiveIndex === 0 && heroBar0) {
+                        heroBar0.style.width = progressPercent + '%';
+                    }
+
+                    if (elapsed >= STORY_DURATION) {
+                        clearInterval(heroProgressInterval);
+                        if (!heroUserInteracted && heroActiveIndex === 0) {
+                            updateHeroSlide(1);
+                        }
+                    }
+                }, 30);
+            }
+
+            if (heroTapPrev && heroTapNext) {
+                // Initialize Slide 0 state and bar fill animation
+                updateHeroSlide(0);
+                startHeroAutoPlay();
+
+                // Tap Left Half -> Go to Slide 0
+                heroTapPrev.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    heroUserInteracted = true;
+                    if (heroProgressInterval) clearInterval(heroProgressInterval);
+                    updateHeroSlide(0);
+                });
+
+                // Tap Right Half -> Go to Slide 1
+                heroTapNext.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    heroUserInteracted = true;
+                    if (heroProgressInterval) clearInterval(heroProgressInterval);
+                    updateHeroSlide(1);
+                });
+            }
+
+            // 3. Profile Before/After Toggle & Sliding Animation Logic
+            const btnBefore = document.getElementById('toggle-before-btn');
+            const btnAfter = document.getElementById('toggle-after-btn');
+            const sliderPill = document.getElementById('toggle-slider-pill');
+            const sliderTrack = document.getElementById('profile-slider-track');
+            const profileCardContainer = document.getElementById('profile-card-container');
+
+            let userInteracted = false;
+            let autoToggleTriggered = false;
+
+            function showBeforeState() {
+                if (sliderTrack) sliderTrack.style.transform = 'translateX(0%)';
+                if (sliderPill) sliderPill.style.transform = 'translateX(0%)';
+                if (btnBefore) {
+                    btnBefore.classList.add('text-stone-800');
+                    btnBefore.classList.remove('text-stone-500');
+                }
+                if (btnAfter) {
+                    btnAfter.classList.remove('text-stone-800');
+                    btnAfter.classList.add('text-stone-500');
+                }
+            }
+
+            function showAfterState() {
+                if (sliderTrack) sliderTrack.style.transform = 'translateX(calc(-100% - 2rem))';
+                if (sliderPill) sliderPill.style.transform = 'translateX(100%)';
+                if (btnAfter) {
+                    btnAfter.classList.add('text-stone-800');
+                    btnAfter.classList.remove('text-stone-500');
+                }
+                if (btnBefore) {
+                    btnBefore.classList.remove('text-stone-800');
+                    btnBefore.classList.add('text-stone-500');
+                }
+            }
+
+            if (btnBefore && btnAfter && sliderTrack) {
+                // Ensure initial state defaults to 'Before'
+                showBeforeState();
+
+                btnBefore.addEventListener('click', function() {
+                    userInteracted = true;
+                    showBeforeState();
+                });
+
+                btnAfter.addEventListener('click', function() {
+                    userInteracted = true;
+                    showAfterState();
+                });
+
+                // Auto-toggle on scroll using Intersection Observer
+                if (profileCardContainer && 'IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !autoToggleTriggered && !userInteracted) {
+                                autoToggleTriggered = true;
+                                
+                                // Ensure initial view is 'Before' when scrolled into view
+                                showBeforeState();
+
+                                // Auto-slide smoothly to 'After' state after 2.5 seconds
+                                setTimeout(() => {
+                                    if (!userInteracted) {
+                                        showAfterState();
+                                    }
+                                }, 2500);
+
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.3 });
+
+                    observer.observe(profileCardContainer);
+                }
+            }
+
+            // 4. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // 5. FAQ Accordion Interaction
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const toggle = item.querySelector('.faq-toggle');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+
+                toggle.addEventListener('click', () => {
+                    const isOpen = !content.classList.contains('hidden');
+                    
+                    // Close all standard items
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-icon').forEach(i => {
+                        i.textContent = '+';
+                        i.style.transform = 'rotate(0deg)';
+                    });
+
+                    // Toggle current if it wasn't open
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.textContent = '−';
+                    }
+                });
+            });
+
+            // 6. Multi-Step Inquiry Form & Google Sheets Integration
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZ4rDtkedeXrBL21b-ebcF81hXYrr5HTnOqZU4LzQXVR37Cqa9KbPFw8Y47Rkr_Rc/exec';
+
+            const formStep1 = document.getElementById('form-step-1');
+            const formStep2 = document.getElementById('form-step-2');
+            const stepIndicatorLabel = document.getElementById('step-indicator-label');
+            const formSuccessState = document.getElementById('form-success-state');
+            const inquiryForm = document.getElementById('inquiry-form');
+
+            const btnNextStep = document.getElementById('btn-next-step');
+            const btnPrevStep = document.getElementById('btn-prev-step');
+            const btnSubmitForm = document.getElementById('btn-submit-form');
+            const submitBtnText = document.getElementById('submit-btn-text');
+            const submitSpinner = document.getElementById('submit-spinner');
+
+            function validateStep1() {
+                let isValid = true;
+                const fields = ['full_name', 'email', 'city', 'role_linkedin'];
+
+                fields.forEach(fieldId => {
+                    const input = document.getElementById(fieldId);
+                    const errorMsg = document.getElementById(`error-${fieldId}`);
+                    let fieldValid = true;
+
+                    if (!input.value.trim()) {
+                        fieldValid = false;
+                    } else if (fieldId === 'email') {
+                        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailPattern.test(input.value.trim())) {
+                            fieldValid = false;
+                        }
+                    }
+
+                    if (!fieldValid) {
+                        isValid = false;
+                        if (errorMsg) errorMsg.classList.remove('hidden');
+                        input.classList.add('border-red-400');
+                    } else {
+                        if (errorMsg) errorMsg.classList.add('hidden');
+                        input.classList.remove('border-red-400');
+                    }
+                });
+
+                return isValid;
+            }
+
+            function validateStep2() {
+                let isValid = true;
+                const fields = ['prompt_reason', 'timeline'];
+
+                fields.forEach(fieldId => {
+                    const input = document.getElementById(fieldId);
+                    const errorMsg = document.getElementById(`error-${fieldId}`);
+
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        if (errorMsg) errorMsg.classList.remove('hidden');
+                        input.classList.add('border-red-400');
+                    } else {
+                        if (errorMsg) errorMsg.classList.add('hidden');
+                        input.classList.remove('border-red-400');
+                    }
+                });
+
+                return isValid;
+            }
+
+            if (btnNextStep) {
+                btnNextStep.addEventListener('click', function() {
+                    if (validateStep1()) {
+                        formStep1.classList.add('hidden');
+                        formStep2.classList.remove('hidden');
+                        formStep2.classList.add('animate-fade-in');
+                        if (stepIndicatorLabel) stepIndicatorLabel.textContent = 'Step 2 of 2';
+                    }
+                });
+            }
+
+            if (btnPrevStep) {
+                btnPrevStep.addEventListener('click', function() {
+                    formStep2.classList.add('hidden');
+                    formStep1.classList.remove('hidden');
+                    formStep1.classList.add('animate-fade-in');
+                    if (stepIndicatorLabel) stepIndicatorLabel.textContent = 'Step 1 of 2';
+                });
+            }
+
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    if (!validateStep2()) return;
+
+                    // Honeypot Spam Check: If honeypot input is filled, drop silently
+                    const honeypot = document.getElementById('website_url_confirm');
+                    if (honeypot && honeypot.value !== '') {
+                        console.warn('Bot submission blocked via honeypot.');
+                        inquiryForm.classList.add('hidden');
+                        formSuccessState.classList.remove('hidden');
+                        return;
+                    }
+
+                    // Collect Form Data
+                    const formData = {
+                        full_name: document.getElementById('full_name').value.trim(),
+                        email: document.getElementById('email').value.trim(),
+                        city: document.getElementById('city').value.trim(),
+                        role_linkedin: document.getElementById('role_linkedin').value.trim(),
+                        prompt_reason: document.getElementById('prompt_reason').value.trim(),
+                        timeline: document.getElementById('timeline').value,
+                        timestamp: new Date().toISOString()
+                    };
+
+                    // Show Loading State
+                    if (submitBtnText) submitBtnText.textContent = 'Submitting...';
+                    if (submitSpinner) submitSpinner.classList.remove('hidden');
+                    if (btnSubmitForm) btnSubmitForm.disabled = true;
+
+                    // Send Request to Google Apps Script
+                    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+                        fetch(GOOGLE_SCRIPT_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(formData)
+                        })
+                        .then(() => {
+                            showSuccessState();
+                        })
+                        .catch(err => {
+                            console.error('Error logging to Google Sheets:', err);
+                            showSuccessState();
+                        });
+                    } else {
+                        setTimeout(() => {
+                            showSuccessState();
+                        }, 800);
+                    }
+                });
+            }
+
+            function showSuccessState() {
+                inquiryForm.classList.add('hidden');
+                if (formSuccessState) formSuccessState.classList.remove('hidden');
+            }
+
+        });
+    </script>
+</body>
+</html>
