@@ -66,8 +66,8 @@ Production funnel events are verified. The exact launch-test recording remained 
 
 Owner: Cloudflare account owner
 
-- [ ] Revoke the older temporary Turnstile API token in Cloudflare
-- [ ] Delete `/home/lukasc/.config/gentlemans-protocol/secrets/cloudflare-turnstile-token` after revocation
+- [x] Revoke the older temporary Turnstile API token in Cloudflare
+- [x] Delete `/home/lukasc/.config/gentlemans-protocol/secrets/cloudflare-turnstile-token` after revocation
 - [ ] Retain the scoped long-standing Cloudflare maintenance token
 
 ### Clean up the production test

@@ -146,8 +146,8 @@ Do not buy unrelated domains for SEO. Redirected domains generally help only whe
 - [x] Long-standing Cloudflare token stored locally with restrictive permissions
 - [x] Token restricted to the company account and domain
 - [ ] After launch, reduce infrastructure Edit permissions to Read where practical
-- [ ] Revoke the older temporary Turnstile token
-- [ ] Delete `/home/lukasc/.config/gentlemans-protocol/secrets/cloudflare-turnstile-token` after revocation
+- [x] Revoke the older temporary Turnstile token
+- [x] Delete `/home/lukasc/.config/gentlemans-protocol/secrets/cloudflare-turnstile-token` after revocation
 - [ ] Keep `/home/lukasc/.config/gentlemans-protocol/secrets/cloudflare-launch-token` out of Git and rotate it if this machine is compromised
 
 ## Production launch decision
