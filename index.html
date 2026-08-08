@@ -745,7 +745,9 @@
                 if (!posthogKey || navigator.doNotTrack === '1') return;
                 const script = document.createElement('script');
                 script.async = true;
-                script.src = `${posthogHost.replace(/\/$/, '')}/static/array.js`;
+                // Load replay support up front so short form sessions are not
+                // lost while the recorder extension is still lazy-loading.
+                script.src = `${posthogHost.replace(/\/$/, '')}/static/array.full.js`;
                 script.onload = function() {
                     if (!window.posthog?.init) return;
                     window.posthog.init(posthogKey, {

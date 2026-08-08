@@ -62,6 +62,8 @@ Owner: Development
 
 Production funnel events are verified. The exact launch-test recording remained in PostHog's lazy-loading state during the launch audit.
 
+The production client now loads PostHog's full browser bundle so replay support is available before short form sessions end. A fresh recording still needs final masking verification.
+
 ### Retire the temporary Turnstile credential
 
 Owner: Cloudflare account owner
