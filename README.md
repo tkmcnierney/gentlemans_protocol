@@ -32,6 +32,12 @@ The production output is written to `_site/`. Configure Cloudflare Pages with:
 - Output directory: `_site`
 - Node version: 20 or newer
 
+## Production deployment
+
+Production deploys automatically through [`.github/workflows/deploy-production.yml`](.github/workflows/deploy-production.yml) after every push or merged pull request to `main`. The workflow runs `npm run check` before deploying `_site` to the existing `gentlemans-protocol` Cloudflare Pages project.
+
+The GitHub `production` environment requires the `CLOUDFLARE_API_TOKEN` secret and `CLOUDFLARE_ACCOUNT_ID` variable. Cloudflare application secrets remain stored on the Pages project and are not copied into GitHub.
+
 ## Build configuration
 
 Set these environment variables in Cloudflare Pages. See `.env.example`.

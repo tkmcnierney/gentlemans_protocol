@@ -46,9 +46,9 @@ Owner: Development and repository owner
 - [x] Commit the production launch implementation
 - [x] Push `main` to `git@github.com:tkmcnierney/gentlemans_protocol.git`
 - [x] Confirm the company retains access to the GitHub repository
-- [ ] Decide whether to connect Cloudflare Pages to GitHub for automatic production deployments
+- [x] Add a GitHub Actions production deployment for successful pushes to `main`
 
-The live deployment currently contains code that is not committed to Git. Cloudflare is serving it, but GitHub is not yet a reliable recovery source.
+GitHub is the production source of truth. A successful `main` push now runs the full check suite and deploys the resulting `_site` build to the existing Cloudflare Pages project.
 
 ### Finish session-replay privacy verification
 
@@ -119,10 +119,10 @@ Owner: Google Workspace and Cloudflare account owner
 
 Owner: Development and repository owner
 
-- [ ] Choose GitHub-triggered Cloudflare deployments or document direct-upload ownership
+- [x] Deploy successful `main` pushes through GitHub Actions
 - [ ] Protect production secrets from preview environments where appropriate
 - [ ] Document a rollback procedure using a known-good Pages deployment
-- [ ] Run the full check suite before every production deployment
+- [x] Run the full check suite before every automated production deployment
 
 ### Register the site with search engines
 
