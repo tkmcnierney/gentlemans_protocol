@@ -3,60 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Private, data-informed dating coaching for driven professionals seeking exceptional long-term relationships.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#15181B">
+    <link rel="canonical" href="https://gentlemansprotocol.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Gentleman's Protocol">
+    <meta property="og:title" content="The Gentleman's Protocol | Executive Dating Coaching">
+    <meta property="og:description" content="A repeatable, data-informed approach to dating for driven professionals.">
+    <meta property="og:url" content="https://gentlemansprotocol.com/">
+    <meta property="og:image" content="https://gentlemansprotocol.com/assets/tyler-hero.jpg">
+    <meta property="og:image:alt" content="The Gentleman's Protocol executive dating coaching">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Gentleman's Protocol | Executive Dating Coaching">
+    <meta name="twitter:description" content="A repeatable, data-informed approach to dating for driven professionals.">
+    <meta name="twitter:image" content="https://gentlemansprotocol.com/assets/tyler-hero.jpg">
+    <meta name="gp:form-endpoint" content="/api/inquiries" data-config="form-endpoint">
+    <meta name="gp:posthog-key" content="phc_BkSnjeUJmDquhinEcop7xc7qqk9PHBikP6ba75TuATwb" data-config="posthog-key">
+    <meta name="gp:posthog-host" content="https://us.i.posthog.com" data-config="posthog-host">
+    <meta name="gp:turnstile-site-key" content="0x4AAAAAAEKVaMWc9mDr_0Sw" data-config="turnstile-site-key">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "The Gentleman's Protocol",
+      "url": "https://gentlemansprotocol.com/",
+      "description": "Private, data-informed dating coaching for driven professionals.",
+      "areaServed": "United States"
+    }
+    </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2315181B'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' fill='%23FAF9F6' font-family='Georgia, serif' font-size='48' font-weight='bold'>GP</text></svg>">
-    <title>The Gentleman's Protocol</title>
+    <title>Executive Dating Coaching | The Gentleman's Protocol</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cream: {
-                            50: '#FAF9F6',
-                            100: '#F5F3EF',
-                            200: '#EBE7DF',
-                            300: '#DDD7CB',
-                        },
-                        charcoal: {
-                            800: '#212529',
-                            900: '#15181B',
-                        },
-                        bronze: {
-                            600: '#9E6B48',
-                            700: '#845333',
-                            800: '#6B4024',
-                            900: '#4D2B14',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Cormorant Garamond', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Custom Helper Styles & Animations -->
-    <style>
-        .heading-serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-    </style>
+    <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body class="bg-cream-50 text-charcoal-900 font-sans antialiased selection:bg-bronze-700 selection:text-white">
 
@@ -87,7 +71,7 @@
                 </div>
 
                 <!-- Mobile Menu Toggle Button -->
-                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-md text-charcoal-800 hover:text-bronze-700 focus:outline-none" aria-label="Toggle Navigation">
+                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-md text-charcoal-800 hover:text-bronze-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-bronze-700" aria-label="Toggle navigation" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -135,7 +119,7 @@
                             <!-- Photo Slide 1: Tyler McNierney -->
                             <div id="hero-slide-0" class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10">
                                 <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/tyler-hero.jpg or update the src path below -->
-                                <img src="assets/tyler-hero.jpg" alt="Tyler McNierney - Founder & Executive Coach" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                <img src="assets/tyler-hero.webp" alt="Tyler McNierney - Founder & Executive Coach" width="901" height="1200" fetchpriority="high" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                                 <div class="hidden w-full h-full bg-stone-300 flex items-center justify-center">
                                     <svg class="w-40 h-40 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
                                         <circle cx="100" cy="75" r="35" fill="#9E6B48" />
@@ -147,7 +131,7 @@
                             <!-- Photo Slide 2: Lukas Chang -->
                             <div id="hero-slide-1" class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-10">
                                 <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/lukas-hero.jpg or update the src path below -->
-                                <img src="assets/lukas-hero.jpg" alt="Lukas Chang - Founder & Executive Coach" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                <img src="assets/lukas-hero.webp" alt="Lukas Chang - Founder & Executive Coach" width="728" height="972" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                                 <div class="hidden w-full h-full bg-stone-400 flex items-center justify-center">
                                     <svg class="w-40 h-40 text-stone-500" fill="currentColor" viewBox="0 0 200 200">
                                         <circle cx="100" cy="75" r="35" fill="#845333" />
@@ -239,7 +223,7 @@
                             <div id="profile-content-before" class="w-full space-y-4 flex-shrink-0">
                                 <!-- Main Portrait Photo Block -->
                                 <div class="relative rounded-2xl overflow-hidden bg-stone-300 aspect-[4/5] flex items-center justify-center border border-stone-300 shadow-xs">
-                                    <img src="assets/lukas-before.jpg" alt="Before Profile Photo - Mountain Hiking Selfie" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                    <img src="assets/lukas-before.webp" alt="Before Profile Photo - Mountain Hiking Selfie" width="900" height="1200" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                                     <svg class="hidden w-36 h-36 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
                                         <circle cx="100" cy="80" r="35" fill="#A89F91" />
                                         <path d="M40,180 C40,130 70,110 100,110 C130,110 160,130 160,180 Z" fill="#8C8274" />
@@ -259,7 +243,7 @@
                             <div id="profile-content-after" class="w-full space-y-4 flex-shrink-0">
                                 <!-- Main Portrait Photo Block -->
                                 <div class="relative rounded-2xl overflow-hidden bg-bronze-900/10 aspect-[4/5] flex items-center justify-center border border-bronze-600/20 shadow-xs">
-                                    <img src="assets/lukas-after.jpg" alt="After Profile Photo - DJ Set Performance" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                    <img src="assets/lukas-after.webp" alt="After Profile Photo - DJ Set Performance" width="1200" height="1200" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                                     <svg class="hidden w-36 h-36 text-bronze-800/30" fill="currentColor" viewBox="0 0 200 200">
                                         <circle cx="100" cy="75" r="38" fill="#A36849" />
                                         <path d="M35,185 C35,125 65,105 100,105 C135,105 165,125 165,185 Z" fill="#703F27" />
@@ -399,7 +383,7 @@
                 <div class="bg-cream-50/60 p-6 sm:p-8 rounded-3xl border border-cream-200/80 flex flex-col xl:flex-row items-center xl:items-start gap-6 shadow-xs hover:shadow-md transition-shadow">
                     <div class="w-48 h-48 rounded-2xl overflow-hidden bg-cream-200 flex-shrink-0 border border-cream-300 relative shadow-xs">
                         <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/tyler-coach.jpg or update the src path below -->
-                        <img src="assets/tyler-coach.jpg" alt="Tyler McNierney" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <img src="assets/tyler-coach.webp" alt="Tyler McNierney" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden w-full h-full bg-stone-300 flex items-center justify-center">
                             <svg class="w-28 h-28 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
                                 <circle cx="100" cy="75" r="35" fill="#A89F91" />
@@ -422,7 +406,7 @@
                 <div class="bg-cream-50/60 p-6 sm:p-8 rounded-3xl border border-cream-200/80 flex flex-col xl:flex-row items-center xl:items-start gap-6 shadow-xs hover:shadow-md transition-shadow">
                     <div class="w-48 h-48 rounded-2xl overflow-hidden bg-cream-200 flex-shrink-0 border border-cream-300 relative shadow-xs">
                         <!-- ASSET PLACEHOLDER: Once you create your local /assets folder, ensure your file exists at assets/lukas-coach.jpg or update the src path below -->
-                        <img src="assets/lukas-coach.jpg" alt="Lukas Chang" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <img src="assets/lukas-coach.webp" alt="Lukas Chang" width="599" height="599" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden w-full h-full bg-stone-300 flex items-center justify-center">
                             <svg class="w-28 h-28 text-stone-400" fill="currentColor" viewBox="0 0 200 200">
                                 <circle cx="100" cy="75" r="35" fill="#A89F91" />
@@ -588,7 +572,7 @@
                     <div id="step-indicator-label" class="text-xs font-semibold uppercase tracking-widest text-bronze-600 mb-2">Step 1 of 2</div>
 
                     <!-- INVISIBLE HONEYPOT FIELD FOR ANTI-SPAM (Hidden from real users) -->
-                    <div class="hidden" aria-hidden="true">
+                    <div class="form-honeypot" aria-hidden="true">
                         <label for="website_url_confirm">Leave this field blank</label>
                         <input type="text" id="website_url_confirm" name="website_url_confirm" tabindex="-1" autocomplete="off">
                     </div>
@@ -662,17 +646,27 @@
                             <p id="error-timeline" class="hidden text-xs text-red-400 mt-1">Please select a timeline.</p>
                         </div>
 
+                        <div id="turnstile-container" class="hidden" aria-label="Spam protection verification"></div>
+
                         <div class="pt-4 flex items-center gap-4">
                             <button id="btn-prev-step" type="button" class="w-1/3 py-4 rounded-full bg-slate-700 text-cream-200 font-semibold text-xs uppercase tracking-wider hover:bg-slate-600 transition-all duration-200">
                                 ← Back
                             </button>
-                            <button id="btn-submit-form" type="submit" class="w-2/3 py-4 rounded-full bg-bronze-700 text-white font-semibold text-xs uppercase tracking-wider hover:bg-bronze-800 transition-all duration-200 shadow-md flex items-center justify-center space-x-2">
+                            <button id="btn-submit-form" type="submit" class="w-2/3 py-4 rounded-full bg-bronze-700 text-white font-semibold text-xs uppercase tracking-wider hover:bg-bronze-800 transition-all duration-200 shadow-md flex items-center justify-center space-x-2 disabled:cursor-not-allowed disabled:opacity-60">
                                 <span id="submit-btn-text">Submit Application</span>
                                 <svg id="submit-spinner" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
                             </button>
+                        </div>
+
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            By submitting, you acknowledge our <a href="privacy.html" class="underline hover:text-white">Privacy Policy</a>. Please do not include highly sensitive information in this initial application.
+                        </p>
+
+                        <div id="form-error-state" class="hidden rounded-xl border border-red-400/40 bg-red-950/30 p-4 text-sm text-red-200" role="alert" aria-live="assertive">
+                            We couldn't send your application. Please try again or email <a class="underline" href="mailto:hello@gentlemansprotocol.com">hello@gentlemansprotocol.com</a>.
                         </div>
                     </div>
 
@@ -721,13 +715,95 @@
             <!-- Bottom Row -->
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
                 <p>&copy; 2026 The Gentleman's Protocol. All rights reserved.</p>
-                <p>Designed for discreet, high-agency relationship building.</p>
+                <div class="flex items-center gap-4">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const getConfig = (name) => document.querySelector(`meta[name="${name}"]`)?.content.trim() || '';
+            const formEndpoint = getConfig('gp:form-endpoint');
+            const posthogKey = getConfig('gp:posthog-key');
+            const posthogHost = getConfig('gp:posthog-host') || 'https://us.i.posthog.com';
+            const turnstileSiteKey = getConfig('gp:turnstile-site-key');
+
+            const safeTrackingQueue = [];
+            function track(eventName, properties = {}) {
+                const safeProperties = { ...properties, path: window.location.pathname };
+                if (window.posthog?.capture) {
+                    window.posthog.capture(eventName, safeProperties);
+                } else if (posthogKey) {
+                    safeTrackingQueue.push([eventName, safeProperties]);
+                }
+            }
+
+            function initializeAnalytics() {
+                if (!posthogKey || navigator.doNotTrack === '1') return;
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `${posthogHost.replace(/\/$/, '')}/static/array.js`;
+                script.onload = function() {
+                    if (!window.posthog?.init) return;
+                    window.posthog.init(posthogKey, {
+                        api_host: posthogHost,
+                        autocapture: false,
+                        capture_pageview: false,
+                        capture_pageleave: false,
+                        disable_session_recording: false,
+                        session_recording: {
+                            maskAllInputs: true,
+                            maskCapturedNetworkRequestFn: request => {
+                                if (request.name) request.name = request.name.split('?')[0];
+                                return request;
+                            }
+                        },
+                        persistence: 'memory'
+                    });
+                    safeTrackingQueue.splice(0).forEach(([event, properties]) => window.posthog.capture(event, properties));
+                };
+                document.head.appendChild(script);
+            }
+
+            initializeAnalytics();
+            const query = new URLSearchParams(window.location.search);
+            track('landing_page_viewed', {
+                utm_source: query.get('utm_source') || undefined,
+                utm_medium: query.get('utm_medium') || undefined,
+                utm_campaign: query.get('utm_campaign') || undefined,
+                referrer_category: document.referrer ? 'referral' : 'direct'
+            });
+
+            let meaningfulVisitTracked = false;
+            window.setTimeout(() => {
+                if (!meaningfulVisitTracked && document.visibilityState === 'visible') {
+                    meaningfulVisitTracked = true;
+                    track('meaningful_visit', { threshold: '15_seconds' });
+                }
+            }, 15000);
+
+            document.querySelectorAll('a[href="#inquire"]').forEach(link => {
+                link.addEventListener('click', () => track('cta_clicked', {
+                    location: link.closest('#mobile-menu') ? 'mobile_menu' : link.closest('header') ? 'header' : 'hero'
+                }));
+            });
+
+            const observedSections = new Set();
+            if ('IntersectionObserver' in window) {
+                const sectionObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.target.id && !observedSections.has(entry.target.id)) {
+                            observedSections.add(entry.target.id);
+                            track('section_viewed', { section: entry.target.id });
+                            if (entry.target.id === 'inquire') track('form_viewed');
+                        }
+                    });
+                }, { threshold: 0.35 });
+                document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
+            }
             
             // 1. Header Shadow on Scroll
             const mainHeader = document.getElementById('main-header');
@@ -873,11 +949,13 @@
                 btnBefore.addEventListener('click', function() {
                     userInteracted = true;
                     showBeforeState();
+                    track('before_after_used', { selected_state: 'before' });
                 });
 
                 btnAfter.addEventListener('click', function() {
                     userInteracted = true;
                     showAfterState();
+                    track('before_after_used', { selected_state: 'after' });
                 });
 
                 // Auto-toggle on scroll using Intersection Observer
@@ -914,11 +992,13 @@
             if (mobileMenuBtn && mobileMenu) {
                 mobileMenuBtn.addEventListener('click', function() {
                     mobileMenu.classList.toggle('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
                 });
 
                 mobileNavLinks.forEach(link => {
                     link.addEventListener('click', function() {
                         mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     });
                 });
             }
@@ -930,6 +1010,11 @@
                 const content = item.querySelector('.faq-content');
                 const icon = item.querySelector('.faq-icon');
 
+                const contentId = `faq-content-${Array.from(faqItems).indexOf(item) + 1}`;
+                content.id = contentId;
+                toggle.setAttribute('aria-controls', contentId);
+                toggle.setAttribute('aria-expanded', 'false');
+
                 toggle.addEventListener('click', () => {
                     const isOpen = !content.classList.contains('hidden');
                     
@@ -939,17 +1024,19 @@
                         i.textContent = '+';
                         i.style.transform = 'rotate(0deg)';
                     });
+                    document.querySelectorAll('.faq-toggle').forEach(button => button.setAttribute('aria-expanded', 'false'));
 
                     // Toggle current if it wasn't open
                     if (!isOpen) {
                         content.classList.remove('hidden');
                         icon.textContent = '−';
+                        toggle.setAttribute('aria-expanded', 'true');
+                        track('faq_opened', { faq_id: contentId });
                     }
                 });
             });
 
-            // 6. Multi-Step Inquiry Form & Google Sheets Integration
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZ4rDtkedeXrBL21b-ebcF81hXYrr5HTnOqZU4LzQXVR37Cqa9KbPFw8Y47Rkr_Rc/exec';
+            // 6. Multi-Step Inquiry Form
 
             const formStep1 = document.getElementById('form-step-1');
             const formStep2 = document.getElementById('form-step-2');
@@ -962,6 +1049,46 @@
             const btnSubmitForm = document.getElementById('btn-submit-form');
             const submitBtnText = document.getElementById('submit-btn-text');
             const submitSpinner = document.getElementById('submit-spinner');
+            const formErrorState = document.getElementById('form-error-state');
+            const turnstileContainer = document.getElementById('turnstile-container');
+            const formStartedAt = Date.now();
+            let formStarted = false;
+            let turnstileToken = '';
+            let turnstileWidgetId = null;
+            const reachedFields = new Set();
+
+            if (turnstileSiteKey && turnstileContainer) {
+                turnstileContainer.classList.remove('hidden');
+                const turnstileScript = document.createElement('script');
+                turnstileScript.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+                turnstileScript.async = true;
+                turnstileScript.defer = true;
+                turnstileScript.onload = () => {
+                    turnstileWidgetId = window.turnstile?.render(turnstileContainer, {
+                        sitekey: turnstileSiteKey,
+                        action: 'inquiry',
+                        theme: 'dark',
+                        appearance: 'interaction-only',
+                        callback: token => { turnstileToken = token; },
+                        'expired-callback': () => { turnstileToken = ''; },
+                        'error-callback': () => { turnstileToken = ''; }
+                    });
+                };
+                document.head.appendChild(turnstileScript);
+            }
+
+            inquiryForm?.querySelectorAll('input:not(#website_url_confirm), textarea, select').forEach(field => {
+                field.addEventListener('focus', () => {
+                    if (!formStarted) {
+                        formStarted = true;
+                        track('form_started', { seconds_to_start: Math.round((Date.now() - formStartedAt) / 1000) });
+                    }
+                    if (!reachedFields.has(field.id)) {
+                        reachedFields.add(field.id);
+                        track('form_field_reached', { field_id: field.id });
+                    }
+                });
+            });
 
             function validateStep1() {
                 let isValid = true;
@@ -983,6 +1110,7 @@
 
                     if (!fieldValid) {
                         isValid = false;
+                        track('form_validation_error', { field_id: fieldId, error_type: fieldId === 'email' ? 'invalid_or_empty' : 'empty' });
                         if (errorMsg) errorMsg.classList.remove('hidden');
                         input.classList.add('border-red-400');
                     } else {
@@ -1004,6 +1132,7 @@
 
                     if (!input.value.trim()) {
                         isValid = false;
+                        track('form_validation_error', { field_id: fieldId, error_type: 'empty' });
                         if (errorMsg) errorMsg.classList.remove('hidden');
                         input.classList.add('border-red-400');
                     } else {
@@ -1022,6 +1151,8 @@
                         formStep2.classList.remove('hidden');
                         formStep2.classList.add('animate-fade-in');
                         if (stepIndicatorLabel) stepIndicatorLabel.textContent = 'Step 2 of 2';
+                        track('form_step_1_completed', { elapsed_seconds: Math.round((Date.now() - formStartedAt) / 1000) });
+                        track('form_step_2_viewed');
                     }
                 });
             }
@@ -1032,6 +1163,7 @@
                     formStep1.classList.remove('hidden');
                     formStep1.classList.add('animate-fade-in');
                     if (stepIndicatorLabel) stepIndicatorLabel.textContent = 'Step 1 of 2';
+                    track('form_back_clicked', { current_step: 2 });
                 });
             }
 
@@ -1040,6 +1172,11 @@
                     e.preventDefault();
 
                     if (!validateStep2()) return;
+                    if (formErrorState) formErrorState.classList.add('hidden');
+                    if (turnstileSiteKey && !turnstileToken) {
+                        showSubmissionError('spam_verification_required');
+                        return;
+                    }
 
                     // Honeypot Spam Check: If honeypot input is filled, drop silently
                     const honeypot = document.getElementById('website_url_confirm');
@@ -1052,46 +1189,68 @@
 
                     // Collect Form Data
                     const formData = {
+                        lead_id: window.crypto?.randomUUID ? window.crypto.randomUUID() : `lead-${Date.now()}-${Math.random().toString(16).slice(2)}`,
                         full_name: document.getElementById('full_name').value.trim(),
                         email: document.getElementById('email').value.trim(),
                         city: document.getElementById('city').value.trim(),
                         role_linkedin: document.getElementById('role_linkedin').value.trim(),
                         prompt_reason: document.getElementById('prompt_reason').value.trim(),
                         timeline: document.getElementById('timeline').value,
-                        timestamp: new Date().toISOString()
+                        timestamp: new Date().toISOString(),
+                        turnstile_token: turnstileToken,
+                        attribution: {
+                            utm_source: query.get('utm_source') || '',
+                            utm_medium: query.get('utm_medium') || '',
+                            utm_campaign: query.get('utm_campaign') || '',
+                            referrer: document.referrer || ''
+                        }
                     };
+
+                    track('form_submit_attempted', { lead_id: formData.lead_id });
 
                     // Show Loading State
                     if (submitBtnText) submitBtnText.textContent = 'Submitting...';
                     if (submitSpinner) submitSpinner.classList.remove('hidden');
                     if (btnSubmitForm) btnSubmitForm.disabled = true;
 
-                    // Send Request to Google Apps Script
-                    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
-                        fetch(GOOGLE_SCRIPT_URL, {
+                    if (formEndpoint) {
+                        fetch(formEndpoint, {
                             method: 'POST',
-                            mode: 'no-cors',
-                            headers: { 'Content-Type': 'application/json' },
+                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                             body: JSON.stringify(formData)
                         })
-                        .then(() => {
-                            showSuccessState();
+                        .then(async response => {
+                            if (!response.ok) throw new Error(`Submission failed with status ${response.status}`);
+                            const result = await response.json();
+                            if (result.success !== true) throw new Error('Submission was not confirmed by the server');
+                            showSuccessState(formData.lead_id);
                         })
                         .catch(err => {
-                            console.error('Error logging to Google Sheets:', err);
-                            showSuccessState();
+                            console.error('Application submission failed:', err);
+                            showSubmissionError(err.name === 'TypeError' ? 'network' : 'server');
                         });
                     } else {
-                        setTimeout(() => {
-                            showSuccessState();
-                        }, 800);
+                        showSubmissionError('not_configured');
                     }
                 });
             }
 
-            function showSuccessState() {
+            function showSuccessState(leadId) {
+                track('form_submit_succeeded', { lead_id: leadId });
                 inquiryForm.classList.add('hidden');
                 if (formSuccessState) formSuccessState.classList.remove('hidden');
+            }
+
+            function showSubmissionError(errorType) {
+                track('form_submit_failed', { error_type: errorType });
+                if (submitBtnText) submitBtnText.textContent = 'Submit Application';
+                if (submitSpinner) submitSpinner.classList.add('hidden');
+                if (btnSubmitForm) btnSubmitForm.disabled = false;
+                if (formErrorState) formErrorState.classList.remove('hidden');
+                if (turnstileWidgetId !== null && window.turnstile?.reset) {
+                    window.turnstile.reset(turnstileWidgetId);
+                    turnstileToken = '';
+                }
             }
 
         });

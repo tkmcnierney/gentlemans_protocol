@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gentlemans-protocol",
+  "pages_build_output_dir": "./_site",
+  "compatibility_date": "2026-08-08",
+  "vars": {
+    "TURNSTILE_HOSTNAMES": "gentlemansprotocol.com,www.gentlemansprotocol.com,gentlemans-protocol.pages.dev"
+  }
+}
