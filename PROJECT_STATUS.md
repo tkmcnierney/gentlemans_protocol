@@ -42,9 +42,9 @@ Complete as soon as possible.
 
 Owner: Development and repository owner
 
-- [ ] Review the current working tree
-- [ ] Commit the production launch implementation
-- [ ] Push `main` to `git@github.com:tkmcnierney/gentlemans_protocol.git`
+- [x] Review the current working tree
+- [x] Commit the production launch implementation
+- [x] Push `main` to `git@github.com:tkmcnierney/gentlemans_protocol.git`
 - [ ] Confirm the company retains access to the GitHub repository
 - [ ] Decide whether to connect Cloudflare Pages to GitHub for automatic production deployments
 
