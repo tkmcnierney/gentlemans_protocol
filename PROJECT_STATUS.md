@@ -45,7 +45,7 @@ Owner: Development and repository owner
 - [x] Review the current working tree
 - [x] Commit the production launch implementation
 - [x] Push `main` to `git@github.com:tkmcnierney/gentlemans_protocol.git`
-- [ ] Confirm the company retains access to the GitHub repository
+- [x] Confirm the company retains access to the GitHub repository
 - [ ] Decide whether to connect Cloudflare Pages to GitHub for automatic production deployments
 
 The live deployment currently contains code that is not committed to Git. Cloudflare is serving it, but GitHub is not yet a reliable recovery source.
@@ -74,8 +74,7 @@ Owner: Cloudflare account owner
 
 Owner: Founder
 
-- [ ] Confirm the test Sheet row contains the expected values
-- [ ] Delete it or clearly label it as test data
+- [x] Founders accept retaining the production test row; no cleanup required
 
 ## P1 — Make launch operations reliable
 
